@@ -1,0 +1,27 @@
+import bolichito.*
+import objetos.*
+test "el bolichito tiene dos objetos brillantes" {
+	bolichito.mostrador(muneco)
+	bolichito.vidriera(placa)
+	assert.that(bolichito.esBrillante())
+
+}
+
+test 'el bolichito es tiene dos objetos del mismo color' {
+	bolichito.mostrador(remera)
+	placa.nuevoColor(rojo)
+	bolichito.vidriera(placa)
+	assert.that(bolichito.esMonocromatico())
+	
+}
+
+test ' el bolichito esta desequilibrado' {
+	bolichito.mostrador(biblioteca)
+	bolichito.vidriera(remera)
+	assert.that(bolichito.estaDesequilibrado())
+}
+test 'el bolichito tiene algo del color indicado' {
+	bolichito.mostrador(remera)
+	bolichito.vidriera(pelota)
+	assert.that(bolichito.tieneAlgoDeColor(rojo))
+}
